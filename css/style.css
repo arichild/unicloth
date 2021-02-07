@@ -1,0 +1,250 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+a{
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+
+
+.header{
+    display: flex;
+    width: 90%;
+    align-items: center;
+    margin: auto;
+    height: 50px;
+    background-color: white;
+}
+.logo{
+    width: 80%;
+    text-align: center;
+    padding-left: 250px;
+}
+.icon{
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    width: 20%;
+}
+.icon li{
+    margin-left: 15px;
+}
+
+
+
+/* -------- ИКОНКА ПОИСКА --------*/
+.search {
+     display: table;
+}
+ .search input {
+     background: none;
+     border: none;
+     outline: none;
+     width: 25px;
+     min-width: 0;
+     padding: 0;
+     z-index: 1;
+     position: relative;
+     line-height: 18px;
+     margin: 5px 0;
+     font-size: 15px;
+     -webkit-appearance: none;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 400;
+     transition: all 0.5s ease;
+     cursor: pointer;
+     color: black;
+}
+ .search input + div {
+     position: relative;
+     height: 3px;
+     width: 100%;
+     margin: -30px 0 0 0;
+}
+ .search input + div svg {
+     display: block;
+     position: absolute;
+     height: 30px;
+     width: 155px;
+     right: 0;
+     top: 0;
+     fill: none;
+     stroke: black;
+     stroke-width: 1.5px;
+     stroke-dashoffset: 271.908;
+     stroke-dasharray: 59 212.908;
+     transition: all 0.5s ease;
+}
+ .search input:not(:placeholder-shown), .search input:focus {
+     width: 155px;
+     padding: 0 4px;
+     cursor: text;
+}
+ .search input:not(:placeholder-shown) + div svg, .search input:focus + div svg {
+     stroke-dasharray: 150 212.908;
+     stroke-dashoffset: 300;
+}
+ ::selection {
+     background: rgba(236, 134, 169, 0.4);
+}
+ ::-moz-selection {
+     background: rgba(236, 134, 169, 0.4);
+}
+/* -------- ИКОНКА ПОИСКА --------*/
+
+
+
+marquee{
+    display: flex;
+    height: 20px;
+    word-spacing: 10px;
+    font-weight: 500;
+}
+
+
+
+.main{
+    display: flex;
+    height: 100vh;
+
+}
+.box-1{
+    flex: 1;
+    background: black;
+    -webkit-transition: background-color 0.5s ease-in-out;
+    -moz-transition: background-color 0.3s ease-in-out;
+    -ms-transition: background-color 0.3s ease-in-out;
+    -o-transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+.box-1:hover{
+    background: #1C1C1C;
+}
+.box-1-hoodie{
+    background-image: url(../img/hudi.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.box-1-hoodie{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.tittle-hoodie{
+    font-size: 118px;
+    font-weight: 700;
+    color: #F380A8;
+}
+
+
+
+.box-2{
+    flex: 1;
+    background: #F380A8;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -moz-transition: background-color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+.box-2:hover{
+    background: #EE98B6;
+}
+.box-2-Tshirts{
+    background-image: url(../img/t-shirts.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.box-2-Tshirts{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.tittle-Tshirts{
+    font-size: 118px;
+    letter-spacing: -5px;
+    font-weight: 700;
+    color: black;
+}
+
+
+
+/* ----------- МОБ.ВЕРСИЯ ----------- */
+@media screen and (max-width: 1024px){
+    .header{
+        width: 95%;
+        height: 85px
+    }
+    .logo{
+        padding: 0px;
+        padding-bottom: 5px;
+        text-align: left;
+        align-items: center;
+    }
+    #inst {
+        width: 186px;
+        height: 100px;
+    }
+    .icon li{
+        margin-left: 30px;
+    }
+    .search input {
+        width: 35px;
+    }
+    .search input + div{
+        height: 34px;
+        margin: -28px 0 0 0;
+    }
+    .search input + div svg {
+        height: 34px;
+         width: 190px;
+}
+    .search input:not(:placeholder-shown), .search input:focus {
+         width: 190px;
+         padding: 0 4px;
+}
+    .icon-user{
+        width: 24px;
+        height: 34px;
+
+
+    }
+    .icon-card{
+        width: 35px;
+        height: 34px;
+    }
+
+    marquee{
+        display: none;
+    }
+
+    .main{
+        flex-direction: column;
+    }
+    .box-1-hoodie{
+        background-size: 60%;
+    }
+    .box-2-Tshirts{
+        background-size: 80%;
+    }
+    .tittle-Tshirts{
+        font-size: 150px;
+    }
+    .tittle-hoodie{
+        font-size: 185px;
+    }
+}
+/* ----------- МОБ.ВЕРСИЯ ----------- */
