@@ -174,7 +174,7 @@ marquee{
     align-items: center;
 }
 .tittle-Tshirts{
-    font-size: 118px;
+    font-size: 115px;
     letter-spacing: -5px;
     font-weight: 700;
     color: black;
@@ -235,16 +235,22 @@ marquee{
         flex-direction: column;
     }
     .box-1-hoodie{
-        background-size: 60%;
+        background-size: 50%;
     }
     .box-2-Tshirts{
-        background-size: 80%;
+        background-size: 70%;
     }
     .tittle-Tshirts{
         font-size: 150px;
     }
     .tittle-hoodie{
         font-size: 185px;
+    }
+}
+
+@media screen and (min-width: 2560px){
+    .logo{
+        padding-left: 450px;
     }
 }
 /* ----------- МОБ.ВЕРСИЯ ----------- */
