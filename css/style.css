@@ -50,7 +50,7 @@ a{
      background: none;
      border: none;
      outline: none;
-     width: 255px;
+     width: 30px;
      min-width: 0;
      padding: 0;
      z-index: 1;
@@ -209,7 +209,8 @@ marquee{
     }
     .search input {
         width: 85px;
-        font-size: 30px;
+        font-weight: 500;
+        font-size: 32px;
         top: 15px;
 
     }
