@@ -209,14 +209,14 @@ marquee{
     }
     .search input {
         width: 85px;
-        font-size: 25px;
-        top: 20px;
+        font-size: 30px;
+        top: 15px;
 
     }
      .search input + div {
          height: 63px;
          width: 100%;
-         margin: -35px 0 0 0;
+         margin: -42px 0 0 0;
     }
      .search input + div svg {
          height: 63px;
