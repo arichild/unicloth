@@ -191,7 +191,7 @@ marquee{
 @media screen and (max-width: 1024px){
     .header{
         width: 95%;
-        height: 200px
+        height: 20px
     }
     .logo{
         padding: 0px;
