@@ -191,7 +191,7 @@ marquee{
 @media screen and (max-width: 1024px){
     .header{
         width: 95%;
-        height: 20px
+        height: 200px
     }
     .logo{
         padding: 0px;
@@ -200,21 +200,20 @@ marquee{
         align-items: center;
     }
     #inst {
-        width: 258px;
-        height: 129px;
+        width: 335px;
+        height: 168px;
     }
     .icon li{
-        margin-left: 35px;
-
+        margin-left: 40px;
     }
     .search input {
-        font-size: 20px;
-        width: 35px;
+        font-size: 25px;
+        width: 50px;
 
     }
     .search input + div{
-        height: 49px;
-        margin: -32px 0 0 0;
+        height: 63px;
+        margin: -35px 0 0 0;
 
     }
     .search input + div svg {
@@ -227,12 +226,12 @@ marquee{
          padding: 0 4px;
 }
     .icon-user{
-        width: 34px;
-        height: 49px;
+        width: 45px;
+        height: 63px;
     }
     .icon-card{
-        width: 54px;
-        height: 49px;
+        width: 70px;
+        height: 63px;
     }
 
     marquee{
