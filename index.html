@@ -9,30 +9,37 @@
 </head>
 
 <body>
+    <script>
+    $("#id_of_input").keyup(function(event){
+    if(event.keyCode == 13){
+        event.preventDefault();
+
+    }
+});
+    </script>
    <div class="container">
     <div class="header">
         <div class="logo">
             <a href="#">
             <svg id="inst" xmlns="http://www.w3.org/2000/svg" width="150px" height="64px" viewBox="0 0 192.335 76">
-  <g id="Сгруппировать_15" data-name="Сгруппировать 15" transform="translate(-39.5 1.5)">
-    <text id="U" transform="translate(40.5 58.5)" fill="#ec86a9" stroke="#ec86a9" stroke-width="1" font-size="61" font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="0" y="0">U</tspan></text>
-    <text id="CLOTH" transform="translate(70.835 58)" font-size="46" font-family="Montserrat-Light, Montserrat" font-weight="300"><tspan x="0" y="0">CLOTH</tspan></text>
-  </g>
-</svg>
-
+            <g id="Сгруппировать_15" data-name="Сгруппировать 15" transform="translate(-39.5 1.5)">
+            <text id="U" transform="translate(40.5 58.5)" fill="#ec86a9" stroke="#ec86a9" stroke-width="1" font-size="61" font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="0" y="0">U</tspan></text>
+            <text id="CLOTH" transform="translate(70.835 58)" font-size="46" font-family="Montserrat-Light, Montserrat" font-weight="300"><tspan x="0" y="0">CLOTH</tspan></text>
+            </g>
+            </svg>
             </a>
         </div>
 
         <ul class="icon">
             <li>
-            <div class="search">
-                <input type="text" placeholder=" ">
+            <form class="search">
+                <input id="myInput"  type="text" placeholder=" ">
             <div>
             <svg>
                 <use xlink:href="#path">
             </svg>
             </div>
-            </div>
+            </form>
 
             <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
                 <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 28" id="path">
@@ -42,8 +49,25 @@
             </li>
 
             <li>
-            <a href="#"><img class="icon-user" src="./img/user.svg" alt="search" width="32px" height="23px"></a>
+            <button class="open-button" onclick="openForm()"><img class="icon-user" src="./img/user.svg" alt="search" width="32px" height="23px"></button>
             </li>
+
+            <div class="form-popup" id="myForm">
+              <form action="/action_page.php" class="form-container">
+
+    <label  for="email"><b>Эл.Почта</b></label>
+    <button class="qwe2" type="submit" class="btn cancel" onclick="closeForm()"><img class="e3" src="./img/s1.svg" alt=""></button>
+    <input type="text" placeholder="" name="email" required>
+
+    <label for="psw"><b>Пароль</b></label>
+    <input type="password" placeholder="" name="psw" required>
+                  <h2 class="forget"><a class="forgotten" href="#">Забыли пароль?</a></h2>
+    <button type="submit" class="btn">Войти</button>
+    <h2 class="or"> -или-</h2>
+    <h2 class="reg"><a class="reg1" href="#">Быстрая регистрация</a></h2>
+    <div class="default-modals-sign-in-arrow" style="right: calc((191.234px - 5vw) - 25px);"></div>
+  </form>
+</div>
 
             <li>
             <a href="#"><img class="icon-card" src="./img/card.svg" alt="search" width="25px" height="23px"></a>
@@ -53,8 +77,8 @@
 
     <marquee behavior="scroll
     " direction="right" bgcolor="#FF0000">
-    МАГАЗИН ОТКРЫТ! МАГАЗИН ОТКРЫТ! МАГАЗИН ОТКРЫТ! МАГАЗИН ОТКРЫТ! МАГАЗИН ОТКРЫТ! МАГАЗИН ОТКРЫТ!
-    МАГАЗИН ОТКРЫТ! МАГАЗИН ОТКРЫТ! МАГАЗИН ОТКРЫТ!
+        МАГАЗИН ОТКРЫТ! МАГАЗИН ОТКРЫТ! МАГАЗИН ОТКРЫТ! МАГАЗИН ОТКРЫТ! МАГАЗИН ОТКРЫТ! МАГАЗИН ОТКРЫТ!
+        МАГАЗИН ОТКРЫТ! МАГАЗИН ОТКРЫТ! МАГАЗИН ОТКРЫТ!
     </marquee>
 
     <div class="main">
@@ -76,7 +100,15 @@
     </div>
     </div>
 
-    <script src="./index.js"></script>
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
 </body>
 
 </html>
