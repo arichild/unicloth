@@ -15,8 +15,11 @@ a{
     text-decoration: none;
 }
 
-
-
+button{
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
 .header{
     display: flex;
     width: 90%;
@@ -39,7 +42,6 @@ a{
 .icon li{
     margin-left: 15px;
 }
-
 
 
 /* -------- ИКОНКА ПОИСКА --------*/
@@ -108,14 +110,12 @@ a{
 /* -------- ИКОНКА ПОИСКА --------*/
 
 
-
 marquee{
     display: flex;
     height: 20px;
     word-spacing: 10px;
     font-weight: 500;
 }
-
 
 
 .main{
@@ -126,7 +126,7 @@ marquee{
 .box-1{
     flex: 1;
     background: black;
-    -webkit-transition: background-color 0.5s ease-in-out;
+    -webkit-transition: background-color 0.3s ease-in-out;
     -moz-transition: background-color 0.3s ease-in-out;
     -ms-transition: background-color 0.3s ease-in-out;
     -o-transition: background-color 0.3s ease-in-out;
@@ -140,6 +140,14 @@ marquee{
     background-repeat: no-repeat;
     background-position: center;
 }
+.box-1-hoodie {
+    transition: 0.5s;
+   }
+/*
+   .box-1-hoodie:hover {
+    transform: scale(1.1);
+   }
+*/
 .box-1-hoodie{
     display: flex;
     height: 100vh;
@@ -153,16 +161,16 @@ marquee{
 }
 
 
-
 .box-2{
     flex: 1;
     background: #F380A8;
-    -webkit-transition: background-color 0.2s ease-in-out;
-    -moz-transition: background-color 0.2s ease-in-out;
-    -ms-transition: background-color 0.2s ease-in-out;
-    -o-transition: background-color 0.2s ease-in-out;
+    -webkit-transition: background-color 0.3s ease-in-out;
+    -moz-transition: background-color 0.3s ease-in-out;
+    -ms-transition: background-color 0.3s ease-in-out;
+    -o-transition: background-color 0.3s ease-in-out;
     transition: background-color 0.3s ease-in-out;
 }
+
 .box-2:hover{
     background: #EE98B6;
 }
@@ -171,7 +179,14 @@ marquee{
     background-repeat: no-repeat;
     background-position: center;
 }
-
+.box-2-Tshirts {
+    transition: 0.5s;
+   }
+/*
+   .box-2-Tshirts:hover {
+    transform: scale(1.1);
+   }
+*/
 .box-2-Tshirts{
     display: flex;
     height: 100vh;
@@ -184,6 +199,121 @@ marquee{
     font-weight: 700;
     color: black;
 }
+
+
+/*---------------  ПОПАП-РЕГИСТРАЦИЯ  --------------- */
+.form-popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    top: 0;
+    left: 0;
+    transition: all 1s ease 0s;
+}
+.popup-body{
+    display: flex;
+    position: absolute;
+    top: 60px;
+    right: 25px;
+}
+.form-container {
+    max-width: 350px;
+    height: 450px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+
+}
+.default-modals-sign-in-arrow{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: -12px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-radius: 5px;
+    background: white;
+}
+.close-button{
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+.close{
+    width: 20px;
+    height: 20px;
+}
+
+
+label b{
+    font-weight: 400;
+    color: gray;
+    text-transform: uppercase;
+}
+.form-container input[type=text], .form-container input[type=password] {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 5px 0 25px 0;
+    border: none;
+    background: #f1f1f1;
+    font-size: 15px;
+    font-weight: 700;
+}
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #E9E9E9;
+  outline: none;
+}
+
+.forget{
+    text-align: center;
+}
+.forget a{
+    color: black;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.or-text{
+    color: black;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.reg-text{
+    color: black;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 25px;
+}
+.reg{
+    color: black;
+}
+
+
+.form-container .btn-sign {
+    background-color: black;
+    border-radius: 50px;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    opacity: 0.8;
+    margin-top: 50px;
+    margin-left: 75px
+}
+.form-container .btn-sign:hover, .open-button:hover {
+  opacity: 1;
+}
+/*---------------  ПОПАП-РЕГИСТРАЦИЯ  --------------- */
+
+
 
 
 
@@ -229,12 +359,12 @@ marquee{
 
     }
     .icon-user{
-        width: 45px;
-        height: 63px;
+        width: 38px;
+        height: 65px;
     }
     .icon-card{
-        width: 70px;
-        height: 63px;
+        width: 58px;
+        height: 65px;
     }
 
     marquee{
@@ -257,7 +387,6 @@ marquee{
         font-size: 185px;
     }
 }
-
 @media screen and (min-width: 2560px){
     .logo{
         padding-left: 450px;
