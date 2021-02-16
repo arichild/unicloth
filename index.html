@@ -9,14 +9,7 @@
 </head>
 
 <body>
-    <script>
-    $("#id_of_input").keyup(function(event){
-    if(event.keyCode == 13){
-        event.preventDefault();
 
-    }
-});
-    </script>
    <div class="container">
     <div class="header">
         <div class="logo">
@@ -49,36 +42,20 @@
             </li>
 
             <li>
-            <button class="open-button" onclick="openForm()"><img class="icon-user" src="./img/user.svg" alt="search" width="32px" height="23px"></button>
+                <button class="open-button" onclick="openForm()">
+                    <img class="icon-user" src="./img/user.svg" alt="search" width="32px" height="23px">
+                </button>
             </li>
 
-            <div class="form-popup" id="myForm">
-              <form action="/action_page.php" class="form-container">
-
-    <label  for="email"><b>Эл.Почта</b></label>
-    <button class="qwe2" type="submit" class="btn cancel" onclick="closeForm()"><img class="e3" src="./img/s1.svg" alt=""></button>
-    <input type="text" placeholder="" name="email" required>
-
-    <label for="psw"><b>Пароль</b></label>
-    <input type="password" placeholder="" name="psw" required>
-                  <h2 class="forget"><a class="forgotten" href="#">Забыли пароль?</a></h2>
-    <button type="submit" class="btn">Войти</button>
-    <h2 class="or"> -или-</h2>
-    <h2 class="reg"><a class="reg1" href="#">Быстрая регистрация</a></h2>
-    <div class="default-modals-sign-in-arrow" style="right: calc((191.234px - 5vw) - 25px);"></div>
-  </form>
-</div>
-
             <li>
-            <a href="#"><img class="icon-card" src="./img/card.svg" alt="search" width="25px" height="23px"></a>
+                <a href="#"><img class="icon-card" src="./img/card.svg" alt="search" width="25px" height="23px"></a>
             </li>
         </ul>
     </div>
 
     <marquee behavior="scroll
     " direction="right" bgcolor="#FF0000">
-        МАГАЗИН ОТКРЫТ! МАГАЗИН ОТКРЫТ! МАГАЗИН ОТКРЫТ! МАГАЗИН ОТКРЫТ! МАГАЗИН ОТКРЫТ! МАГАЗИН ОТКРЫТ!
-        МАГАЗИН ОТКРЫТ! МАГАЗИН ОТКРЫТ! МАГАЗИН ОТКРЫТ!
+        МАГАЗИН ОТКРЫТ! МАГАЗИН ОТКРЫТ! МАГАЗИН ОТКРЫТ! МАГАЗИН ОТКРЫТ! МАГАЗИН ОТКРЫТ! МАГАЗИН ОТКРЫТ!МАГАЗИН ОТКРЫТ! МАГАЗИН ОТКРЫТ! МАГАЗИН ОТКРЫТ!
     </marquee>
 
     <div class="main">
@@ -100,15 +77,47 @@
     </div>
     </div>
 
-<script>
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
+    <div class="form-popup" id="myForm">
+        <div class="popup-body">
+            <form action="/action_page.php" class="form-container">
 
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-}
-</script>
+                <div class="default-modals-sign-in-arrow" style="right: calc((191.234px - 5vw) - 25px);"></div>
+
+                <label  for="email"><b>Эл.Почта</b></label>
+                <button class="close-button" type="submit" onclick="closeForm()">
+                    <img class="close" src="./img/close.svg" alt="">
+                </button>
+                <input type="text" placeholder="" name="email" required>
+
+                <label for="psw"><b>Пароль</b></label>
+                <input type="password" placeholder="" name="psw" required>
+                <h2 class="forget"><a href="#">Забыли пароль?</a></h2>
+
+                <button type="submit" class="btn-sign">Войти</button>
+                <h2 class="or-text"> -или-</h2>
+                <h2 class="reg-text"><a class="reg" href="#">Быстрая регистрация</a></h2>
+            </form>
+        </div>
+    </div>
+
+       <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+
+    <script>
+        $("#myInput").keyup(function(event){
+            if(event.keyCode == 13){
+                event.preventDefault();
+            }
+        });
+    </script>
+
 </body>
 
 </html>
