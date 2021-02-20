@@ -200,16 +200,19 @@ marquee{
 /*---------------  ПОПАП-РЕГИСТРАЦИЯ  --------------- */
 .bg{
     position: fixed;
-    background-color: rgba(0,0,0,0.4);
     width: 100%;
     height: 100%;
+    background-color: rgba(0,0,0,0.4);
 }
 .form-popup {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    display: none;
+    z-index: 1;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
 }
 .popup-body{
     position: absolute;
@@ -286,9 +289,10 @@ label b{
 .reg-text{
     color: black;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 15px;
     text-align: center;
     margin-top: 25px;
+    font-weight: 500;
 }
 .reg{
     color: black;
@@ -296,10 +300,13 @@ label b{
 
 
 .form-container .btn-sign {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    font-weight: 300;
     background-color: black;
     border-radius: 50px;
-    color: white;
-    padding: 15px 20px;
     border: none;
     cursor: pointer;
     width: 50%;
