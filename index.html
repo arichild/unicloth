@@ -42,7 +42,7 @@
             </li>
 
             <li>
-                <button class="open-button" onclick="openForm()">
+                <button id="open-btn">
                     <img class="icon-user" src="./img/user.svg" alt="search" width="32px" height="23px">
                 </button>
             </li>
@@ -97,20 +97,35 @@
 
                 <button type="submit" class="btn-sign">Войти</button>
                 <h2 class="or-text"> -или-</h2>
-                <h2 class="reg-text"><a class="reg" href="#">Быстрая регистрация</a></h2>
+                <h2 class="reg-text"><a class="reg" href="#">БЫСТРАЯ РЕГИСТРАЦИЯ</a></h2>
             </form>
         </div>
     </div>
 
 
-       <script>
-        function openForm() {
-            document.getElementById("myForm").style.display = "block";
-        }
 
-        function closeForm() {
-            document.getElementById("myForm").style.display = "none";
-        }
+   <script>
+        var modal = document.getElementById("myForm");
+        var btn = document.getElementById("open-btn");
+        var bg = document.getElementsByClassName("bg")[0];
+        var close = document.getElementsByClassName("close-button")[0];
+
+       // When the user clicks on the button, open the modal
+            btn.onclick = function() {
+                modal.style.display = "block";
+            }
+
+       // When the user clicks on <span> (x), close the modal
+            close.onclick = function() {
+                modal.style.display = "none";
+            }
+
+        // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == bg) {
+                    modal.style.display = "none";
+                }
+            }
     </script>
 
     <script>
