@@ -19,27 +19,30 @@ a{
 
 button{
     border: none;
-    background-color: white;
+    background-color: black;
     cursor: pointer;
+
 }
 .header{
     display: flex;
-    width: 90%;
     align-items: center;
     margin: auto;
     height: 50px;
-    background-color: white;
+    background-color: black;
+
 }
+
 .logo{
     width: 80%;
     text-align: center;
-    padding-left: 250px;
+    padding-left: 280px;
 }
 .icon{
     display: flex;
     list-style: none;
     justify-content: flex-end;
     width: 20%;
+    padding-right: 70px;
 }
 .icon li{
     margin-left: 15px;
@@ -67,7 +70,7 @@ button{
      font-weight: 400;
      transition: all 0.5s ease;
      cursor: pointer;
-     color: black;
+     color: white;
 
 }
  .search input + div {
@@ -85,7 +88,7 @@ button{
      right: 0;
      top: 0;
      fill: none;
-     stroke: black;
+     stroke: white;
      stroke-width: 1.5px;
      stroke-dashoffset: 271.908;
      stroke-dasharray: 59 212.908;
@@ -112,90 +115,40 @@ button{
 /* -------- ИКОНКА ПОИСКА --------*/
 
 
-marquee{
-    display: flex;
-    height: 20px;
-    word-spacing: 10px;
-    font-weight: 500;
-}
+
 
 
 .main{
-    display: flex;
     height: 100vh;
+    padding: 5% 5%;
+}
 
-}
-.box-1{
-    flex: 1;
-    background: black;
-    -webkit-transition: background-color 0.3s ease-in-out;
-    -moz-transition: background-color 0.3s ease-in-out;
-    -ms-transition: background-color 0.3s ease-in-out;
-    -o-transition: background-color 0.3s ease-in-out;
-    transition: background-color 0.3s ease-in-out;
-}
-.box-1:hover{
-    background: #1C1C1C;
-}
-.box-1-hoodie{
-    background-image: url(../img/hudi.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.box-1-hoodie {
-    transition: 0.5s;
-   }
-   .box-1-hoodie:hover {
-    transform: scale(0.9);
-   }
-.box-1-hoodie{
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-}
-.tittle-hoodie{
-    font-size: 118px;
+.breadcrumbs {
+    font-size: 18px;
     font-weight: 700;
-    color: #F380A8;
+    text-transform: uppercase;
+    color: #786367;
+    position: relative;
+}
+.breadcrumbs a{
+    color: #a30320;
 }
 
-
-.box-2{
-    flex: 1;
-    background: #F380A8;
-    -webkit-transition: background-color 0.3s ease-in-out;
-    -moz-transition: background-color 0.3s ease-in-out;
-    -ms-transition: background-color 0.3s ease-in-out;
-    -o-transition: background-color 0.3s ease-in-out;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.box-2:hover{
-    background: #EE98B6;
-}
-.box-2-Tshirts{
-    background-image: url(../img/t-shirts.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.box-2-Tshirts {
-    transition: 0.5s;
-   }
-   .box-2-Tshirts:hover {
-    transform: scale(0.9);
-   }
-.box-2-Tshirts{
+.products{
     display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
 }
-.tittle-Tshirts{
-    font-size: 115px;
-    letter-spacing: -5px;
+.products-tittle{
+    width: 100%;
+    text-align: center;
+    color: #EC86A9;
+}
+.products-tittle h1{
+    font-size: 30px;
     font-weight: 700;
-    color: black;
+}
+.category-list-content{
+    margin: -1px -17.5px;
 }
 
 
@@ -330,11 +283,11 @@ label b{
 /* ----------- МОБ.ВЕРСИЯ ----------- */
 @media screen and (max-width: 1024px){
     .header{
-        width: 95%;
-        height: 200px
+        height: 200px;
     }
     .logo{
         padding: 0px;
+        padding-left: 20px;
         padding-bottom: 5px;
         text-align: left;
         align-items: center;
@@ -381,21 +334,6 @@ label b{
         display: none;
     }
 
-    .main{
-        flex-direction: column;
-    }
-    .box-1-hoodie{
-        background-size: 50%;
-    }
-    .box-2-Tshirts{
-        background-size: 70%;
-    }
-    .tittle-Tshirts{
-        font-size: 150px;
-    }
-    .tittle-hoodie{
-        font-size: 185px;
-    }
 }
 @media screen and (min-width: 2560px){
     .logo{
