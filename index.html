@@ -46,7 +46,7 @@
             </li>
 
             <li>
-                <a href="#"><img class="icon-card" src="./img/card.svg" alt="search" width="25px" height="23px"></a>
+                <button id="open-card"><img class="icon-card" src="./img/card.svg" alt="search" width="25px" height="23px"></button>
             </li>
         </ul>
     </div>
@@ -100,13 +100,43 @@
         </div>
     </div>
 
+   <div class="modal-form" id="modal-card">
+        <div class="bgCard"></div>
+        <div class="modal-body">
+            <form class="modal-container">
 
+                <div class="default-modals-card-in-arrow" style="right: calc((191.234px - 5vw) - 25px);"></div>
 
-   <script>
+                <button class="closeCard" type="submit" onclick="closeForm()">
+                    <img class="close" src="./img/close.svg" alt="">
+                </button>
+               <h2>Cart</h2>
+   <ul class="cd-cart-items">
+      <li>
+         <!-- ... -->
+      </li>
+
+      <li>
+         <!-- ... -->
+      </li>
+   </ul> <!-- cd-cart-items -->
+
+   <div class="cd-cart-total">
+      <p>Total <span>$39.96</span></p>
+   </div> <!-- cd-cart-total -->
+
+   <a href="#0" class="checkout-btn">Checkout</a>
+
+   <p class="cd-go-to-cart"><a href="#0">Go to cart page</a></p>
+            </form>
+        </div>
+    </div>
+
+<script>
         var modal = document.getElementById("popup-reg");
         var open = document.getElementById("open-btn");
         var bg = document.getElementsByClassName("bg")[0];
-        var close = document.getElementsByClassName("close-button")[0];
+        var close = document.getElementsByClassName("close")[0];
 
        // When the user clicks on the button, open the modal
             open.onclick = function() {
@@ -128,6 +158,32 @@
             }
 
 
+    </script>
+
+     <script>
+        var modalCard = document.getElementById("modal-card");
+        var openCard = document.getElementById("open-card");
+        var bgCard = document.getElementsByClassName("bgCard")[0];
+        var closeCard = document.getElementsByClassName("closeCard")[0];
+
+       // When the user clicks on the button, open the modal
+            openCard.onclick = function() {
+                modalCard.style.display = "block";
+            }
+
+
+
+       // When the user clicks on (x), close the modal
+            closeCard.onclick = function() {
+                modalCard.style.display = "none";
+            }
+
+        // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == bgCard) {
+                    modalCard.style.display = "none";
+                }
+            }
     </script>
 
     <script>

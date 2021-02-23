@@ -19,31 +19,37 @@ a{
 
 button{
     border: none;
-    background-color: white;
+    background-color: black;
     cursor: pointer;
      outline: none;
 }
 .header{
     display: flex;
-    width: 90%;
     align-items: center;
     margin: auto;
     height: 50px;
-    background-color: white;
+    background-color: black;
+
 }
+
 .logo{
     width: 80%;
     text-align: center;
-    padding-left: 250px;
+    padding-left: 280px;
 }
 .icon{
     display: flex;
     list-style: none;
     justify-content: flex-end;
     width: 20%;
+    padding-right: 70px;
 }
 .icon li{
     margin-left: 15px;
+}
+
+.category-list a{
+    border: 1px solid black;
 }
 
 
@@ -68,7 +74,7 @@ button{
      font-weight: 400;
      transition: all 0.5s ease;
      cursor: pointer;
-     color: black;
+     color: white;
 
 }
  .search input + div {
@@ -86,7 +92,7 @@ button{
      right: 0;
      top: 0;
      fill: none;
-     stroke: black;
+     stroke: white;
      stroke-width: 1.5px;
      stroke-dashoffset: 271.908;
      stroke-dasharray: 59 212.908;
@@ -113,92 +119,53 @@ button{
 /* -------- ИКОНКА ПОИСКА --------*/
 
 
-marquee{
-    display: flex;
-    height: 20px;
-    word-spacing: 10px;
-    font-weight: 500;
-}
+
 
 
 .main{
-    display: flex;
     height: 100vh;
+    padding: 5% 5%;
+}
 
-}
-.box-1{
-    flex: 1;
-    background: black;
-    -webkit-transition: background-color 0.3s ease-in-out;
-    -moz-transition: background-color 0.3s ease-in-out;
-    -ms-transition: background-color 0.3s ease-in-out;
-    -o-transition: background-color 0.3s ease-in-out;
-    transition: background-color 0.3s ease-in-out;
-}
-.box-1:hover{
-    background: #1C1C1C;
-}
-.box-1-hoodie{
-    background-image: url(../img/hudi.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.box-1-hoodie {
-    transition: 0.5s;
-   }
-   .box-1-hoodie:hover {
-    transform: scale(0.9);
-   }
-.box-1-hoodie{
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-}
-.tittle-hoodie{
-    font-size: 118px;
+.breadcrumbs {
+    font-size: 18px;
     font-weight: 700;
-    color: #F380A8;
+    text-transform: uppercase;
+    color: #786367;
+    position: relative;
+}
+.breadcrumbs a{
+    color: #a30320;
 }
 
-
-.box-2{
-    flex: 1;
-    background: #F380A8;
-    -webkit-transition: background-color 0.3s ease-in-out;
-    -moz-transition: background-color 0.3s ease-in-out;
-    -ms-transition: background-color 0.3s ease-in-out;
-    -o-transition: background-color 0.3s ease-in-out;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.box-2:hover{
-    background: #EE98B6;
-}
-.box-2-Tshirts{
-    background-image: url(../img/t-shirts.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.box-2-Tshirts {
-    transition: 0.5s;
-   }
-   .box-2-Tshirts:hover {
-    transform: scale(0.9);
-   }
-.box-2-Tshirts{
+/*
+.products{
     display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
 }
-.tittle-Tshirts{
-    font-size: 115px;
-    letter-spacing: -5px;
+*/
+.products-tittle{
+    width: 100%;
+    text-align: center;
+    color: #EC86A9;
+}
+.products-tittle h1{
+    font-size: 30px;
     font-weight: 700;
-    color: black;
 }
-
+.category-list-content{
+    margin: -1px -17.5px;
+}
+.item-name{
+        display: block;
+    color: #000;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .11px;
+    margin-top: 15px;s
+}
 
 /*---------------  ПОПАП-РЕГИСТРАЦИЯ  --------------- */
 .bg{
@@ -324,138 +291,20 @@ label b{
 }
 /*---------------  ПОПАП-РЕГИСТРАЦИЯ  --------------- */
 
-.bgCard{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(0,0,0,0.4);
-}
+/*---------------  ПОПАП-КОРЗИНА  --------------- */
 
-
-.modal-form {
-    position: absolute;
-    display: none;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-}
-.modal-body{
-    position: absolute;
-    top: 0px;
-    right: 0px;
-}
-.modal-container {
-    max-width: 400px;
-    height: 100vh;
-    padding: 30px;
-    background-color: white;
-}
-.default-modals-card-in-arrow{
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: -12px;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    border-radius: 5px;
-    background: white;
-}
-.closeCard{
-    position: absolute;
-    right: 20px;
-    top: 15px;
-}
-.close{
-    width: 20px;
-    height: 20px;
-}
-
-
-label b{
-    font-weight: 400;
-    color: gray;
-    text-transform: uppercase;
-}
-.modal-container input[type=text], .modal-container input[type=password] {
-    flex-direction: column;
-    width: 100%;
-    padding: 10px;
-    border-radius: 15px;
-    margin: 5px 0 25px 0;
-    border: none;
-    background: #f1f1f1;
-    font-size: 15px;
-    font-weight: 700;
-}
-.modal-container input[type=text]:focus, .modal-container input[type=password]:focus {
-  background-color: #E9E9E9;
-  outline: none;
-}
-
-.forget{
-    text-align: center;
-}
-.forget a{
-    color: black;
-    font-weight: 300;
-    font-size: 18px;
-}
-
-.or-text{
-    color: black;
-    font-weight: 300;
-    font-size: 18px;
-    text-align: center;
-    margin-top: 25px;
-}
-
-.reg-text{
-    color: black;
-    font-weight: 300;
-    font-size: 15px;
-    text-align: center;
-    margin-top: 25px;
-    font-weight: 500;
-}
-.reg{
-    color: black;
-}
-
-
-.modal-container .btn-sign {
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    font-size: 18px;
-    padding: 10px 20px;
-    font-weight: 300;
-    background-color: black;
-    border-radius: 50px;
-    border: none;
-    cursor: pointer;
-    width: 50%;
-    opacity: 0.8;
-    margin-top: 50px;
-    margin-left: 75px
-}
-.modal-container .btn-sign:hover, .open-button:hover {
-  opacity: 1;
-}
+/*---------------  ПОПАП-КОРЗИНА  --------------- */
 
 
 
 /* ----------- МОБ.ВЕРСИЯ ----------- */
 @media screen and (max-width: 1024px){
     .header{
-        width: 95%;
-        height: 200px
+        height: 200px;
     }
     .logo{
         padding: 0px;
+        padding-left: 20px;
         padding-bottom: 5px;
         text-align: left;
         align-items: center;
@@ -502,21 +351,6 @@ label b{
         display: none;
     }
 
-    .main{
-        flex-direction: column;
-    }
-    .box-1-hoodie{
-        background-size: 50%;
-    }
-    .box-2-Tshirts{
-        background-size: 70%;
-    }
-    .tittle-Tshirts{
-        font-size: 150px;
-    }
-    .tittle-hoodie{
-        font-size: 185px;
-    }
 }
 @media screen and (min-width: 2560px){
     .logo{
