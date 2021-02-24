@@ -93,7 +93,9 @@
                 <input type="password" placeholder="" name="psw" required>
                 <h2 class="forget"><a href="#">Забыли пароль?</a></h2>
 
+                <div class="signBtn">
                 <button type="submit" class="btn-sign">Войти</button>
+                </div>
                 <h2 class="or-text"> -или-</h2>
                 <h2 class="reg-text"><a class="reg" href="#">БЫСТРАЯ РЕГИСТРАЦИЯ</a></h2>
             </form>
@@ -105,87 +107,27 @@
         <div class="modal-body">
             <form class="modal-container">
 
-                <div class="default-modals-card-in-arrow" style="right: calc((191.234px - 5vw) - 25px);"></div>
-
                 <button class="closeCard" type="submit" onclick="closeForm()">
-                    <img class="close" src="./img/close.svg" alt="">
+                    <img class="closeCardBtn" src="./img/backCard.svg" alt="">
+                    <span>ПРОДОЛЖИТЬ ПОКУПКИ</span>
                 </button>
-               <h2>Cart</h2>
-   <ul class="cd-cart-items">
-      <li>
-         <!-- ... -->
-      </li>
-
-      <li>
-         <!-- ... -->
-      </li>
-   </ul> <!-- cd-cart-items -->
-
-   <div class="cd-cart-total">
-      <p>Total <span>$39.96</span></p>
-   </div> <!-- cd-cart-total -->
-
-   <a href="#0" class="checkout-btn">Checkout</a>
-
-   <p class="cd-go-to-cart"><a href="#0">Go to cart page</a></p>
+                <div class="mainCard">
+                   <h2>Мои покупки</h2>
+                    <div class="mainCard-content">
+                        <div class="product-costs">
+                            <span>Итого:</span>
+                            <span>0 BYN</span>
+                        </div>
+                    </div>
+                    <div class="Checkout">
+                    <button type="submit" class="btn-checkout">Оформить заказ</button>
+                </div>
+                </div>
             </form>
         </div>
     </div>
 
-<script>
-        var modal = document.getElementById("popup-reg");
-        var open = document.getElementById("open-btn");
-        var bg = document.getElementsByClassName("bg")[0];
-        var close = document.getElementsByClassName("close")[0];
-
-       // When the user clicks on the button, open the modal
-            open.onclick = function() {
-                modal.style.display = "block";
-            }
-
-
-
-       // When the user clicks on (x), close the modal
-            close.onclick = function() {
-                modal.style.display = "none";
-            }
-
-        // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-                if (event.target == bg) {
-                    modal.style.display = "none";
-                }
-            }
-
-
-    </script>
-
-     <script>
-        var modalCard = document.getElementById("modal-card");
-        var openCard = document.getElementById("open-card");
-        var bgCard = document.getElementsByClassName("bgCard")[0];
-        var closeCard = document.getElementsByClassName("closeCard")[0];
-
-       // When the user clicks on the button, open the modal
-            openCard.onclick = function() {
-                modalCard.style.display = "block";
-            }
-
-
-
-       // When the user clicks on (x), close the modal
-            closeCard.onclick = function() {
-                modalCard.style.display = "none";
-            }
-
-        // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-                if (event.target == bgCard) {
-                    modalCard.style.display = "none";
-                }
-            }
-    </script>
-
+<!--
     <script>
         $("#myInput").keyup(function(event){
             if(event.keyCode == 13){
@@ -193,7 +135,9 @@
             }
         });
     </script>
-
+-->
+<script src="js/modalCard.js"></script>
+<script src="js/modalReg.js"></script>
 </body>
 
 </html>

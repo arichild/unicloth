@@ -200,7 +200,7 @@ marquee{
 }
 
 
-/*---------------  ПОПАП-РЕГИСТРАЦИЯ  --------------- */
+/*---------------  МОДАЛЬНОЕ ОКНО-РЕГИСТР  --------------- */
 .bg{
     position: fixed;
     width: 100%;
@@ -225,12 +225,13 @@ marquee{
     right: 25px;
 }
 .form-container {
-    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
     height: 450px;
     padding: 30px;
     background-color: white;
     border-radius: 15px;
-
 }
 .default-modals-sign-in-arrow{
     position: absolute;
@@ -303,7 +304,12 @@ label b{
     color: black;
 }
 
+.signBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+}
 .form-container .btn-sign {
     font-family: 'Montserrat', sans-serif;
     color: white;
@@ -317,13 +323,15 @@ label b{
     width: 50%;
     opacity: 0.8;
     margin-top: 50px;
-    margin-left: 75px
+/*    margin-left: 75px*/
 }
 .form-container .btn-sign:hover, .open-button:hover {
   opacity: 1;
 }
-/*---------------  ПОПАП-РЕГИСТРАЦИЯ  --------------- */
+/*---------------  МОДАЛЬНОЕ ОКНО-РЕГИСТР  --------------- */
 
+
+/*---------------  МОДАЛЬНОЕ ОКНО-КОРЗИНА  --------------- */
 .bgCard{
     position: fixed;
     width: 100%;
@@ -332,10 +340,8 @@ label b{
     left: 0;
     background-color: rgba(0,0,0,0.4);
 }
-
-
 .modal-form {
-    position: absolute;
+    position: fixed;
     display: none;
     z-index: 1;
     top: 0;
@@ -350,101 +356,84 @@ label b{
     right: 0px;
 }
 .modal-container {
-    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
     height: 100vh;
-    padding: 30px;
     background-color: white;
 }
-.default-modals-card-in-arrow{
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: -12px;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    border-radius: 5px;
-    background: white;
-}
 .closeCard{
-    position: absolute;
-    right: 20px;
-    top: 15px;
-}
-.close{
-    width: 20px;
-    height: 20px;
-}
-
-
-label b{
-    font-weight: 400;
-    color: gray;
-    text-transform: uppercase;
-}
-.modal-container input[type=text], .modal-container input[type=password] {
-    flex-direction: column;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
-    padding: 10px;
-    border-radius: 15px;
-    margin: 5px 0 25px 0;
-    border: none;
-    background: #f1f1f1;
-    font-size: 15px;
+    border-bottom: 2px solid #ebeef1;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 50px 20px;
+}
+.closeCardBtn{
+    width: 35px;
+    height: 35px;
+}
+
+.mainCard{
+    justify-content: center;
+    width: 100%;
+    padding: 30px;
+}
+.mainCard-content{
+    display: flex;
+    flex-direction: column;
+}
+mainCard h2{
+    display: flex;
     font-weight: 700;
+    font-size: 20px;
+    justify-content: center;
 }
-.modal-container input[type=text]:focus, .modal-container input[type=password]:focus {
-  background-color: #E9E9E9;
-  outline: none;
+.product-costs{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
 }
-
-.forget{
-    text-align: center;
-}
-.forget a{
-    color: black;
-    font-weight: 300;
-    font-size: 18px;
-}
-
-.or-text{
-    color: black;
-    font-weight: 300;
-    font-size: 18px;
-    text-align: center;
-    margin-top: 25px;
-}
-
-.reg-text{
-    color: black;
-    font-weight: 300;
+.product-costs span{
+    text-transform: uppercase;
     font-size: 15px;
-    text-align: center;
-    margin-top: 25px;
-    font-weight: 500;
 }
-.reg{
-    color: black;
+.product-costs span:nth-child(2){
+    font-weight: 700;
+    font-size: 18px;
 }
+.Checkout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-
-.modal-container .btn-sign {
+}
+.mainCard .btn-checkout {
     font-family: 'Montserrat', sans-serif;
     color: white;
-    font-size: 18px;
-    padding: 10px 20px;
+    font-size: 20px;
+    padding: 15px 20px;
     font-weight: 300;
     background-color: black;
     border-radius: 50px;
     border: none;
     cursor: pointer;
-    width: 50%;
+    width: 80%;
     opacity: 0.8;
     margin-top: 50px;
-    margin-left: 75px
 }
-.modal-container .btn-sign:hover, .open-button:hover {
+.mainCard .btn-checkout:hover{
   opacity: 1;
 }
+/*--------------- МОДАЛЬНОЕ ОКНО-КОРЗИНА  --------------- */
 
 
 
@@ -518,6 +507,7 @@ label b{
         font-size: 185px;
     }
 }
+
 @media screen and (min-width: 2560px){
     .logo{
         padding-left: 450px;
