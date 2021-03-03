@@ -47,44 +47,86 @@
             </li>
 
             <li>
-                <a href="#"><img class="icon-card" src="./img/card-white.svg" alt="search" width="25px" height="23px"></a>
+                <button id="open-card"><img class="icon-card" src="./img/card-white.svg" alt="search" width="25px" height="23px"></button>
             </li>
         </ul>
     </div>
     </div>
 
-    <div class="main">
+    <div class="catalog">
         <div class="breadcrumbs">
             <a href="../index.html" title="Магазин" class="breadcrumbs-item">МАГАЗИН</a>
             /
             <span class="breadcrumbs-item">ХУДИ</span>
         </div>
 
-        <div class="products">
+        <div class="navigation">
             <div class="products-tittle">
                 <h1>ХУДИ</h1>
             </div>
-
-            <div class="category-list">
-                <div class="category-list-content">
-                   <div class="item">
-                    <a href="#"><img src="./img/img-hoodie/hod1.png" alt="" width="426px" height="373px">
-                    </a>
-                    <span class="item_name">
-                        asdasda
-                    </span>
-                    </div>
-                    <a href="#"><img src="./img/img-hoodie/hod1.png" alt="" width="426px" height="373px"></a>
-                    <a href="#"><img src="./img/img-hoodie/hod1.png" alt="" width="426px" height="373px"></a>
-                    <a href="#"><img src="./img/img-hoodie/hod1.png" alt="" width="426px" height="373px"></a>
-                    <a href="#"><img src="./img/img-hoodie/hod1.png" alt="" width="426px" height="373px"></a>
-                    <a href="#"><img src="./img/img-hoodie/hod1.png" alt="" width="426px" height="373px"></a>
-                    <a href="#"><img src="./img/img-hoodie/hod1.png" alt="" width="426px" height="373px"></a>
-                    <a href="#"><img src="./img/img-hoodie/hod1.png" alt="" width="426px" height="373px"></a>
-                </div>
-            </div>
         </div>
+
+        <ul class="products-catalog">
+            <li class="product-wrapper">
+            <a href="" class="product">
+                <div class="product-photo">
+                    <img src="./img/img-hoodie/hod1.png" alt="">
+                </div>
+            </a>
+        </li>
+        <li class="product-wrapper">
+            <a href="" class="product">
+                <div class="product-photo">
+                    <img src="./img/img-hoodie/hod1.png" alt="">
+                </div>
+            </a>
+        </li>
+        <li class="product-wrapper">
+            <a href="" class="product">
+                <div class="product-photo">
+                    <img src="./img/img-hoodie/hod1.png" alt="">
+                </div>
+            </a>
+        </li>
+        <li class="product-wrapper">
+            <a href="" class="product">
+                <div class="product-photo">
+                    <img src="./img/img-hoodie/hod1.png" alt="">
+                </div>
+            </a>
+        </li>
+        <li class="product-wrapper">
+            <a href="" class="product">
+                <div class="product-photo">
+                    <img src="./img/img-hoodie/hod1.png" alt="">
+                </div>
+            </a>
+        </li>
+        <li class="product-wrapper">
+            <a href="" class="product">
+                <div class="product-photo">
+                    <img src="./img/img-hoodie/hod1.png" alt="">
+                </div>
+            </a>
+        </li>
+        <li class="product-wrapper">
+            <a href="" class="product">
+                <div class="product-photo">
+                    <img src="./img/img-hoodie/hod1.png" alt="">
+                </div>
+            </a>
+        </li>
+        <li class="product-wrapper">
+            <a href="" class="product">
+                <div class="product-photo">
+                    <img src="./img/img-hoodie/hod1.png" alt="">
+                </div>
+            </a>
+        </li>
+    </ul>
     </div>
+
+
 
     <div class="form-popup" id="popup-reg">
         <div class="bg"></div>
@@ -112,33 +154,33 @@
 
 
 
-   <script>
-        var modal = document.getElementById("popup-reg");
-        var open = document.getElementById("open-btn");
-        var bg = document.getElementsByClassName("bg")[0];
-        var close = document.getElementsByClassName("close-button")[0];
 
-       // When the user clicks on the button, open the modal
-            open.onclick = function() {
-                modal.style.display = "block";
-            }
+   <div class="modal-form" id="modal-card">
+        <div class="bgCard"></div>
+        <div class="modal-body">
+            <form class="modal-container">
 
+                <button class="closeCard" type="submit" onclick="closeForm()">
+                    <img class="closeCardBtn" src="../img/backCard.svg" alt="">
+                    <span>ПРОДОЛЖИТЬ ПОКУПКИ</span>
+                </button>
+                <div class="mainCard">
+                   <h2>Мои покупки</h2>
+                    <div class="mainCard-content">
+                        <div class="product-costs">
+                            <span>Итого:</span>
+                            <span>0 BYN</span>
+                        </div>
+                    </div>
+                    <div class="Checkout">
+                    <button type="submit" class="btn-checkout">Оформить заказ</button>
+                </div>
+                </div>
+            </form>
+        </div>
+    </div>
 
-
-       // When the user clicks on (x), close the modal
-            close.onclick = function() {
-                modal.style.display = "none";
-            }
-
-        // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-                if (event.target == bg) {
-                    modal.style.display = "none";
-                }
-            }
-
-    </script>
-
+<!--
     <script>
         $("#myInput").keyup(function(event){
             if(event.keyCode == 13){
@@ -146,7 +188,10 @@
             }
         });
     </script>
+-->
 
+<script src="../js/modalCard.js"></script>
+<script src="../js/modalReg.js"></script>
 </body>
 
 </html>

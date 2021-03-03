@@ -122,7 +122,7 @@ button{
 
 
 
-.main{
+.catalog{
     height: 100vh;
     padding: 5% 5%;
 }
@@ -150,21 +150,57 @@ button{
     color: #EC86A9;
 }
 .products-tittle h1{
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 700;
 }
-.category-list-content{
-    margin: -1px -17.5px;
+
+
+.products-catalog{
+    margin-top: 50px;
 }
-.item-name{
+.product-wrapper {
     display: block;
-    color: #000;
+    width: 100%;
+    float: left;
+    transition: width .2s;
+}
+.product {
+    display: block;
+    border: 1px solid #b5e9a7;
+    border-radius: 3px;
+    position: relative;
+    background: #fff;
+    margin: 0 20px 20px 0;
     text-decoration: none;
-    font-size: 13px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: .11px;
-    margin-top: 15px;s
+    color: #474747;
+    z-index: 0;
+    height: 300px;
+}
+.products {
+    list-style: none;
+    margin: 0 -20px 0 0;
+    padding: 0;
+}
+
+
+.product-photo {
+    position: relative;
+    padding-bottom: 100%;
+    overflow: hidden;
+}
+.product-photo img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    transition: transform .4s ease-out;
+}
+.product:hover .product-photo img {
+    transform: scale(1.05);
 }
 
 /*---------------  ПОПАП-РЕГИСТРАЦИЯ  --------------- */
@@ -213,6 +249,7 @@ button{
     position: absolute;
     right: 20px;
     top: 15px;
+    background-color: white;
 }
 .close{
     width: 20px;
@@ -291,14 +328,134 @@ label b{
 }
 /*---------------  ПОПАП-РЕГИСТРАЦИЯ  --------------- */
 
-/*---------------  ПОПАП-КОРЗИНА  --------------- */
+/*---------------  МОДАЛЬНОЕ ОКНО-КОРЗИНА  --------------- */
+.closeCard{
+    background-color: white;
+}
+.bgCard{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-form {
+    position: fixed;
+    display: none;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+.modal-body{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+.modal-container {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 100vh;
+    background-color: white;
+}
+.closeCard{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    border-bottom: 2px solid #ebeef1;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 50px 20px;
+}
+.closeCardBtn{
+    width: 35px;
+    height: 35px;
+}
 
-/*---------------  ПОПАП-КОРЗИНА  --------------- */
+.mainCard{
+    justify-content: center;
+    width: 100%;
+    padding: 30px;
+}
+.mainCard-content{
+    display: flex;
+    flex-direction: column;
+}
+mainCard h2{
+    display: flex;
+    font-weight: 700;
+    font-size: 20px;
+    justify-content: center;
+}
+.product-costs{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+}
+.product-costs span{
+    text-transform: uppercase;
+    font-size: 15px;
+}
+.product-costs span:nth-child(2){
+    font-weight: 700;
+    font-size: 18px;
+}
+.Checkout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+}
+.mainCard .btn-checkout {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 20px;
+    padding: 15px 20px;
+    font-weight: 300;
+    background-color: black;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    width: 80%;
+    opacity: 0.8;
+    margin-top: 50px;
+}
+.mainCard .btn-checkout:hover{
+  opacity: 1;
+}
+/*--------------- МОДАЛЬНОЕ ОКНО-КОРЗИНА  --------------- */
 
+@media only screen and (min-width: 450px) {
+    .product-wrapper {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .product-wrapper {
+        width: 33.333%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .product-wrapper {
+        width: 25%;
+    }
+}
 
 /* ----------- МОБ.ВЕРСИЯ ----------- */
 @media screen and (max-width: 1024px){
+
     .header{
         height: 200px;
     }
