@@ -27,7 +27,7 @@
                 <input id="myInput"  type="text" placeholder=" ">
             <div>
             <svg>
-                <use xlink:href="#path">
+                <use xlink:href="#path" />
             </svg>
             </div>
             </form>
@@ -67,7 +67,7 @@
 
         <div class="box-2">
             <div class="box-2-Tshirts">
-                <a class="main-Tshirts" href="#">
+                <a class="main-Tshirts" href="./T-shirts/Tshirts.html">
                 <h3 class="tittle-Tshirts">ФУТБОЛКИ</h3>
                 </a>
             </div>
@@ -76,16 +76,16 @@
     </div>
 
 
-    <div class="form-popup" id="popup-reg">
+    <div class="modal-authorization" id="modal-authorization">
         <div class="bg"></div>
-        <div class="popup-body">
-            <form class="form-container">
+        <div class="authorization-body">
+            <form class="authorization-container">
 
                 <div class="default-modals-sign-in-arrow" style="right: calc((191.234px - 5vw) - 25px);"></div>
 
                 <label  for="email"><b>Эл.Почта</b></label>
-                <button class="close-button" type="submit" onclick="closeForm()">
-                    <img class="close" src="./img/close.svg" alt="">
+                <button class="close-authorization" type="submit" onclick="closeForm()">
+                    <img class="closeAuthorizationBtn" src="./img/close.svg" alt="">
                 </button>
                 <input type="text" placeholder="" name="email" required>
 
@@ -96,18 +96,54 @@
                 <div class="signBtn">
                 <button type="submit" class="btn-sign">Войти</button>
                 </div>
-                <h2 class="or-text"> -или-</h2>
-                <h2 class="reg-text"><a class="reg" href="#">БЫСТРАЯ РЕГИСТРАЦИЯ</a></h2>
+                <h2 class="or-text"> -или- </h2>
+                <h2 class="authorization-text">
+                    <button class="reg" id="open-reg">
+                         БЫСТРАЯ РЕГИСТРАЦИЯ
+                    </button>
+                </h2>
             </form>
         </div>
     </div>
 
-   <div class="modal-form" id="modal-card">
-        <div class="bgCard"></div>
-        <div class="modal-body">
-            <form class="modal-container">
+    <div class="modal-registration" id="modal-registration">
+        <div class="registration-body">
+            <form class="registration-container">
+           <button class="close-registration" type="submit" onclick="closeForm()">
+                    <img class="closeRegistrationBtn" src="./img/close.svg" alt="">
+                </button>
 
-                <button class="closeCard" type="submit" onclick="closeForm()">
+                <span class="registration-tittle">Регистрация</span>
+                <label  for="email"><b>Эл.Почта</b></label>
+                <button class="close-authorization" type="submit" onclick="closeForm()">
+                    <img class="closeRegistrationBtn" src="./img/close.svg" alt="">
+                </button>
+                <input type="text" placeholder="" name="email" required>
+
+                <label for="psw"><b>Пароль</b></label>
+                <input type="password" placeholder="" name="psw" required>
+                <label for="psw-repeat"><b>Подтвердите пароль</b></label>
+                <input type="password" placeholder="" name="psw-repeat" required>
+
+                <div class="RegBtn">
+                <button type="submit" class="btn-reg">Зарегистрироваться</button>
+                </div>
+                <h2 class="or-text"> -или- </h2>
+                <h2 class="authorization-text">
+                    <button class="authorization" id="open-authorization">
+                       ВОЙТИ
+                    </button>
+                </h2>
+            </form>
+        </div>
+    </div>
+
+   <div class="modal-card" id="modal-card">
+        <div class="bgCard"></div>
+        <div class="card-body">
+            <form class="card-container">
+
+                <button class="close-Card" type="submit" onclick="closeForm()">
                     <img class="closeCardBtn" src="./img/backCard.svg" alt="">
                     <span>ПРОДОЛЖИТЬ ПОКУПКИ</span>
                 </button>
@@ -137,6 +173,7 @@
     </script>
 -->
 <script src="js/modalCard.js"></script>
+<script src="js/modalAuthorization.js"></script>
 <script src="js/modalReg.js"></script>
 </body>
 

@@ -1,21 +1,21 @@
-        var modal = document.getElementById("popup-reg");
-        var btn = document.getElementById("open-btn");
-        var bg = document.getElementsByClassName("bg")[0];
-        var close = document.getElementsByClassName("close-button")[0];
+var modalReg = document.getElementById("modal-registration");
+        var openReg = document.getElementById("open-reg");
+        var bgCard = document.getElementsByClassName("bgCard")[0];
+        var closeReg = document.getElementsByClassName("close-registration")[0];
 
        // When the user clicks on the button, open the modal
-            btn.onclick = function() {
-                modal.style.display = "block";
+            openReg.onclick = function() {
+                modalReg.style.display = "block";
             }
 
-       // When the user clicks on <span> (x), close the modal
-            close.onclick = function() {
-                modal.style.display = "none";
+       // When the user clicks on (x), close the modal
+            closeReg.onclick = function() {
+                modalReg.style.display = "none";
             }
 
         // When the user clicks anywhere outside of the modal, close it
             window.onclick = function(event) {
-                if (event.target == bg) {
-                    modal.style.display = "none";
+                if (event.target == bgCard) {
+                    modalReg.style.display = "none";
                 }
             }

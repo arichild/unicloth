@@ -1,7 +1,7 @@
 var modalCard = document.getElementById("modal-card");
         var openCard = document.getElementById("open-card");
         var bgCard = document.getElementsByClassName("bgCard")[0];
-        var closeCard = document.getElementsByClassName("closeCard")[0];
+        var closeCard = document.getElementsByClassName("close-Card")[0];
 
        // When the user clicks on the button, open the modal
             openCard.onclick = function() {
