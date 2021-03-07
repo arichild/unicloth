@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <title>unicloth</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -29,7 +27,7 @@
                 <input id="myInput"  type="text" placeholder=" ">
             <div>
             <svg>
-                <use xlink:href="#path">
+                <use xlink:href="#path" />
             </svg>
             </div>
             </form>
@@ -48,7 +46,7 @@
             </li>
 
             <li>
-                <a href="#"><img class="icon-card" src="./img/card.svg" alt="search" width="25px" height="23px"></a>
+                <button id="open-card"><img class="icon-card" src="./img/card.svg" alt="search" width="25px" height="23px"></button>
             </li>
         </ul>
     </div>
@@ -61,7 +59,7 @@
     <div class="main">
         <div class="box-1">
             <div class="box-1-hoodie">
-                <a class="main-hoodie" href="#">
+                <a class="main-hoodie" href="./Hoodie/hoodie.html">
                 <h3 class="tittle-hoodie">ХУДИ</h3>
                 </a>
             </div>
@@ -69,7 +67,7 @@
 
         <div class="box-2">
             <div class="box-2-Tshirts">
-                <a class="main-Tshirts" href="#">
+                <a class="main-Tshirts" href="./T-shirts/Tshirts.html">
                 <h3 class="tittle-Tshirts">ФУТБОЛКИ</h3>
                 </a>
             </div>
@@ -78,16 +76,16 @@
     </div>
 
 
-    <div class="form-popup" id="myForm">
+    <div class="modal-authorization" id="modal-authorization">
         <div class="bg"></div>
-        <div class="popup-body">
-            <form action="/action_page.php" class="form-container">
+        <div class="authorization-body">
+            <form class="authorization-container">
 
                 <div class="default-modals-sign-in-arrow" style="right: calc((191.234px - 5vw) - 25px);"></div>
 
                 <label  for="email"><b>Эл.Почта</b></label>
-                <button class="close-button" type="submit" onclick="closeForm()">
-                    <img class="close" src="./img/close.svg" alt="">
+                <button class="close-authorization" type="submit" onclick="closeForm()">
+                    <img class="closeAuthorizationBtn" src="./img/close.svg" alt="">
                 </button>
                 <input type="text" placeholder="" name="email" required>
 
@@ -95,39 +93,77 @@
                 <input type="password" placeholder="" name="psw" required>
                 <h2 class="forget"><a href="#">Забыли пароль?</a></h2>
 
+                <div class="signBtn">
                 <button type="submit" class="btn-sign">Войти</button>
-                <h2 class="or-text"> -или-</h2>
-                <h2 class="reg-text"><a class="reg" href="#">БЫСТРАЯ РЕГИСТРАЦИЯ</a></h2>
+                </div>
+                <h2 class="or-text"> -или- </h2>
+                <h2 class="authorization-text">
+                    <button class="reg" id="open-reg">
+                         БЫСТРАЯ РЕГИСТРАЦИЯ
+                    </button>
+                </h2>
             </form>
         </div>
     </div>
 
+    <div class="modal-registration" id="modal-registration">
+        <div class="registration-body">
+            <form class="registration-container">
+           <button class="close-registration" type="submit" onclick="closeForm()">
+                    <img class="closeRegistrationBtn" src="./img/close.svg" alt="">
+                </button>
 
+                <span class="registration-tittle">Регистрация</span>
+                <label  for="email"><b>Эл.Почта</b></label>
+                <button class="close-authorization" type="submit" onclick="closeForm()">
+                    <img class="closeRegistrationBtn" src="./img/close.svg" alt="">
+                </button>
+                <input type="text" placeholder="" name="email" required>
 
-   <script>
-        var modal = document.getElementById("myForm");
-        var btn = document.getElementById("open-btn");
-        var bg = document.getElementsByClassName("bg")[0];
-        var close = document.getElementsByClassName("close-button")[0];
+                <label for="psw"><b>Пароль</b></label>
+                <input type="password" placeholder="" name="psw" required>
+                <label for="psw-repeat"><b>Подтвердите пароль</b></label>
+                <input type="password" placeholder="" name="psw-repeat" required>
 
-       // When the user clicks on the button, open the modal
-            btn.onclick = function() {
-                modal.style.display = "block";
-            }
+                <div class="RegBtn">
+                <button type="submit" class="btn-reg">Зарегистрироваться</button>
+                </div>
+                <h2 class="or-text"> -или- </h2>
+                <h2 class="authorization-text">
+                    <button class="authorization" id="open-authorization">
+                       ВОЙТИ
+                    </button>
+                </h2>
+            </form>
+        </div>
+    </div>
 
-       // When the user clicks on <span> (x), close the modal
-            close.onclick = function() {
-                modal.style.display = "none";
-            }
+   <div class="modal-card" id="modal-card">
+        <div class="bgCard"></div>
+        <div class="card-body">
+            <form class="card-container">
 
-        // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-                if (event.target == bg) {
-                    modal.style.display = "none";
-                }
-            }
-    </script>
+                <button class="close-Card" type="submit" onclick="closeForm()">
+                    <img class="closeCardBtn" src="./img/backCard.svg" alt="">
+                    <span>ПРОДОЛЖИТЬ ПОКУПКИ</span>
+                </button>
+                <div class="mainCard">
+                   <h2>Мои покупки</h2>
+                    <div class="mainCard-content">
+                        <div class="product-costs">
+                            <span>Итого:</span>
+                            <span>0 BYN</span>
+                        </div>
+                    </div>
+                    <div class="Checkout">
+                    <button type="submit" class="btn-checkout">Оформить заказ</button>
+                </div>
+                </div>
+            </form>
+        </div>
+    </div>
 
+<!--
     <script>
         $("#myInput").keyup(function(event){
             if(event.keyCode == 13){
@@ -135,7 +171,10 @@
             }
         });
     </script>
-
+-->
+<script src="js/modalCard.js"></script>
+<script src="js/modalAuthorization.js"></script>
+<script src="js/modalReg.js"></script>
 </body>
 
 </html>
